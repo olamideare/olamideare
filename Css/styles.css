@@ -1,0 +1,836 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Roboto&display=swap');
+
+/* start: global styles */
+body {
+    font-family: "Montserrat", "Sans-serif";
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #777;
+    line-height: 1.7;
+}
+
+* {
+    outline: none;
+}
+
+*:not(.slick-track):not(.slick-list) {
+    transition: 0.4s;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.containing {
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.flexing {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+h1, h2, h3, h4, h5 {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+  font-family: "Montserrat", "Sans-serif";
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 4rem;
+  line-height: 1.0;
+  margin-bottom: 1rem;
+}
+
+p {
+    margin: 0 0 1rem;
+}
+
+button.rounded {
+  background: white;
+  border: none;
+  color:#032030 ;
+  font-size: 16px;
+  border-radius: 10px;
+  padding: 10px 30px;
+  line-height: 1.5;
+  cursor: pointer;
+  margin-top: 2em;
+}
+
+button.rounded:hover {
+  background:goldenrod;
+}
+
+p.large-paragraph {
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+/* end: global styles */
+
+/* start: header styles */
+#header-hero-container {
+    min-height: 600px;
+    height: calc(100vh);
+    position: relative;
+}
+
+header {
+    background: transparent;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+}
+
+
+.hamburger-menu {
+    background-color: transparent;
+    border: 1px solid #fff;
+    padding: 3px 5px;
+    width: 30px;
+    cursor: pointer;
+    margin-top: 10px;
+    display: none;
+}
+
+.hamburger-menu .strip {
+    display: block;
+    height: 1px;
+    background-color: #fff;
+    margin: 4px 0;
+}
+
+header ul {
+    list-style-type: none;
+}
+
+header ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+#close-flyout {
+    display: none;
+}
+
+header ul li a {
+    color: #999;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+header ul.is-sticky li a {
+    color: #000;
+}
+
+header ul li a:hover,
+header ul li a.active {
+    color: #fff;
+}
+
+header ul.is-sticky li a:hover,
+header ul.is-sticky li a.active {
+    color: #032030;
+}
+
+#active {
+  border: 2px solid #fff;
+  padding: 5px 8px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+/* end: header styles */
+
+/* start: hero section styles */
+#hero {
+    background: url('https://pbs.twimg.com/media/EVAAXOQXQAID0N9?format=jpg&name=medium') center center no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    margin: 0 0 0;
+    padding: 0 0 0;
+    border-bottom: 1px solid #ccc;
+}
+
+
+#hero .img {
+  color: gray;
+}
+
+#hero .hero-text {
+    position: absolute;
+    top: 40%;
+    margin-left: 12em;
+    z-index: 2;
+    color: #fff;
+    width: 500px;
+    text-align: left;
+}
+
+#hero .hero-text p {
+    line-height: 1.5em;
+    font-weight: 300;
+    font-size: 1rem;
+}
+/* end: hero section styles */
+
+/* start: Why trade with us */
+#why-trade{
+    background: white;
+    text-align: center;
+  }
+
+  #why-trade h1{
+    display: inline-block;
+    border-bottom: 4px solid #032030;
+    font-size: 20px;
+    padding-bottom: 14px;
+    margin-top: 40px;
+    color:#032030 ;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+  }
+
+  #why-trade p {
+      margin-bottom: 2em;
+  }
+
+  .cen{
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+  }
+
+  .trade{
+    display: inline-block;
+    width: calc(100% / 3);
+    margin: 0 -2px;
+    padding: 20px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+
+  .trade:hover{
+    background: whitesmoke;
+  }
+
+  .trade i{
+    color: #032030;
+    font-size: 34px;
+    margin-bottom: 30px;
+  }
+
+  .trade h2{
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+    color: #032030;
+  }
+
+  .trade p{
+    color: gray;
+    font-size: 15px;
+    font-weight: 500;
+  }
+/* end: why trade with us styles */
+
+/* start: client styles */
+#clients{
+    background: white;
+    padding: 40px 0;
+    text-align: center;
+  }
+  
+  .inner-width{
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+  }
+  
+  #clients h1{
+    font-weight: 400;
+    letter-spacing: 7px;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #032030;
+  }
+  
+  .client-pics{
+    padding: 40px 0;
+  }
+  
+  .client-pics img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 20px;
+    filter: grayscale(100%);
+    transition: .3s;
+    cursor: pointer;
+  }
+  
+  .client-pics img:hover, .client-pics img.active{
+    filter: none;
+  }
+  
+  
+  .client-contents{
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  .client{
+    display: none;
+  }
+  
+  .client.active{
+    display: block;
+  }
+  
+  .client p{
+    color: #5c5c5c;
+    margin-bottom: 20px;
+  }
+  
+  .client .description{
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 15px;
+  }
+  
+/* end: client styles */
+
+/* start: fact styles */
+#fact {
+  margin: 2rem 0;
+}
+
+#fact h2 {
+  font-weight: 400;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  font-size: 50px;
+  color: #032030;
+  margin-bottom: 0em;
+  padding-bottom: 0em;
+}
+
+#fact .flex > img {
+  width: 47%;
+}
+
+#fact .flex > div {
+  width: 40%;
+}
+/* end: fact styles */
+
+/* start: schedule services styles */
+#schedule-services {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+#schedule-services h2 {
+    text-align: center;
+    display: inline-block;
+    border-bottom: 4px solid #032030;
+    font-size: 20px;
+    padding-bottom: 14px;
+    margin-top: 40px;
+    color:#032030 ;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    margin-bottom: 20px;
+}
+
+#schedule-services .flexing > div {
+  width: 32%;
+  box-sizing: border-box;
+}
+
+#schedule-services .flexing strong {
+  display: block;
+  color: #212122;
+  font-size: 0.85rem;
+  opacity: 0.6;
+  letter-spacing: 4px;
+  text-align: left;
+}
+
+.personal-trainer-box {
+  background: url('https://images.pexels.com/photos/1099299/pexels-photo-1099299.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500') top center no-repeat;
+  padding: 4rem 3rem 3rem;
+}
+
+.personal-trainer-box h4 {
+  margin-bottom: 2rem;
+  color: #fff;
+  text-align: left;
+}
+
+.personal-trainer-box p {
+  color: #fff;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.personal-trainer-box button {
+  width: 100%;
+}
+
+#schedule-services .personal-trainer-box strong {
+  color: #fff;
+}
+/* end: schedule services styles */
+
+/* start: footer styles */
+footer {
+  background: #032030;
+  padding-top: 8em;
+  padding-bottom: 1em;
+}
+
+footer .flex {
+  padding-bottom: 2rem;
+  border-bottom: 1px solid white;
+}
+
+footer h4 {
+  color: #fff;
+  margin-bottom: 1rem;
+  font-weight: 300;
+}
+
+footer h5.follow-us {
+  margin-top: 1rem;
+  color: white;
+}
+
+footer .footer-about {
+  width: 47%;
+}
+
+footer .footer-about p {
+  width: 65%;
+  color: white;
+  font-weight: 1em;
+}
+
+footer .footer-quick-links {
+  width: 16%;
+}
+
+footer .footer-quick-links ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer .footer-quick-links ul li {
+  margin: 10px 0;
+}
+
+footer .footer-quick-links ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+footer .footer-quick-links ul li a:hover {
+  color: #fff;
+}
+
+footer .footer-subscribe {
+  width: 35%;
+}
+
+#subscribe-container {
+  position: relative;
+}
+
+footer .footer-subscribe input {
+  border-radius: 30px;
+  height: 43px;
+  font-family: "Roboto", "Helvetica", "Sans-serif";
+  border: 1px solid #6c757d;
+  background-color: transparent;
+  font-size: 1rem;
+  padding: 10px;
+  color: #fff;
+  box-sizing: border-box;
+  width: 80%;
+}
+
+footer button.right-rounded {
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  background: white;
+  font-size: 16px;
+  color: #212122;
+  padding: 10px 30px 9px;
+  line-height: 1.5;
+  cursor: pointer;
+  border: none;
+  position: absolute;
+  right: 0;
+}
+
+footer button.right-rounded:hover {
+  background:goldenrod;
+}
+
+footer .footer-subscribe ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer .footer-subscribe ul li {
+  display: inline-block;
+  margin: 0 16px;
+}
+
+footer .footer-subscribe ul li:first-child {
+  margin-left: 0;
+}
+
+footer .footer-subscribe ul li a {
+  text-decoration: none;
+  color:white;
+}
+
+footer .footer-subscribe ul li a:hover {
+  color: #212122;
+}
+
+footer small {
+  margin-top: 3rem;
+  font-size: 1rem;
+  display: block;
+  text-align: center;
+  color: white;
+}
+/* end: footer styles */
+
+/* start: media queries */
+@media (max-width: 991px) {
+  #logo {
+      top: 1px;
+  }
+
+  #nav-toggle {
+      display: block;
+  }
+
+  #active {
+    border: 2px solid #fff;
+    padding: 2px 0.5px;
+    text-align: left;
+    letter-spacing: 2px;
+  }
+
+  nav ul {
+      position: fixed;
+      background: #fff;
+      right: -100%;
+      top: 0;
+      margin: 0;
+      padding: 2rem;
+      height: 100%;
+      width: 300px;
+      box-sizing: border-box;
+      box-shadow: 5px 0 10px 3px #999;
+  }
+
+  #close-flyout {
+      position: absolute;
+      right: 2rem;
+      top: 1.5rem;
+      font-size: 30px;
+      color: #777;
+      cursor: pointer;
+      display: block;
+      line-height: 1;
+      margin: 0;
+  }
+
+  nav ul li {
+      display: block;
+      margin: 20px 0;
+  }
+
+  nav ul li:first-child {
+      margin-top: 50px;
+  }
+  nav ul li a {
+      font-size: 20px;
+      color: #212529;
+  }
+
+  nav ul li a.active,
+  nav ul li a:hover {
+      color: #f69314;
+  }
+
+  #hero .hero-text {
+    margin-left: 4em;
+  }
+
+  #adex-logo {
+    margin-left: 2em;
+  }
+
+  #schedule-services h2 {
+    display: inline-block;
+    border-bottom: 4px solid #032030;
+  }
+
+  .upcoming-classes-box {
+    padding: 2rem 1.5rem 0.5rem;
+  }
+
+  .upcoming-classes-box h4 {
+    margin-bottom: 1rem;
+  }
+
+  .membership-cards-box .inner-container {
+    padding: 0.5rem 1.5rem 1.5rem;
+    height: 100%;
+    box-sizing: border-box;
+  }
+
+  .membership-cards-box h2 {
+    font-size: 3.5rem;
+  }
+
+  .personal-trainer-box {
+    padding: 2rem 1.5rem 1.5rem;
+  }
+
+  .personal-trainer-box p {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 767px) {
+  h1 {
+      font-size: 3rem;
+  }
+
+  h2 {
+      font-size: 1.75rem;
+  }
+
+  h3 {
+      font-size: 1.2rem;
+  }
+
+  .large-paragraph {
+      font-size: 1rem;
+  }
+
+  p {
+      font-size: 0.8rem;
+  }
+
+  .container {
+      max-width: 540px;
+  }
+
+  #active {
+    border: 2px solid #fff;
+    padding: 2px 0.5px;
+    text-align: left;
+    letter-spacing: 2px;
+  }
+
+  #hero .hero-text {
+      width: 300px;
+      margin-left: 4em;
+  }
+
+  #fact .flex > img {
+      display: none;
+  }
+
+  #fact .flex > div {
+      width: 100%;
+  }
+
+  .flexing {
+    display: block;
+  }
+
+  .flexing .box {
+    margin: 0 auto;
+    width: 100% !important;
+    margin-top: 3rem;
+  }
+
+  .flexing .box:first-child {
+    margin-top: 0;
+  }
+
+  .trade{
+    width: 50%;
+  }
+
+  .trader{
+    width: 50%;
+  }
+
+  #fact h2{
+    text-align: center;
+  }
+
+  #fact p{
+    text-align: center;
+  }
+
+  #schedule-services .flexing {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #schedule-services .flexing > div.upcoming-classes-box,
+  #schedule-services .flexing > div.membership-cards-box {
+    width: 48%;
+  }
+
+  #schedule-services .flexing > div.personal-trainer-box {
+    width: 100%;
+    margin-top: 3rem;
+    background-size: cover;
+  }
+
+  #schedule-services h2 {
+    display: inline-block;
+    border-bottom: 4px solid #032030;
+}
+
+  .personal-trainer-box p {
+    font-size: 0.95rem;
+  }
+
+  .membership-cards-box .inner-container {
+    background-size: cover;
+  }
+
+  footer {
+      padding: 6rem 0;
+  }
+
+  footer .flex {
+      flex-wrap: wrap;
+  }
+
+  footer .flex > div {
+      width: 100%;
+      margin-top: 1rem;
+  }
+
+  footer .flex > div:first-child {
+      margin-top: 0;
+  }
+
+  footer .footer-about p {
+      font-size: 1rem;
+      width: 100%;
+  }
+
+  footer .footer-subscribe input {
+      width: 90%;
+  }
+
+  footer h5.follow-us {
+      margin-top: 2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  #hero .hero-text {
+      width: 230px;
+      margin-left: 4em;
+  }
+
+  #hero h1 {
+    font-size: 3em;
+
+  }
+
+  #active {
+    border: 2px solid #fff;
+    padding: 2px 0.5px;
+    text-align: left;
+    letter-spacing: 2px;
+  }
+
+  .trade{
+    width: 100%;
+  }
+
+  .trader{
+    width: 100%;
+  }
+
+  #fact h2{
+    text-align: center;
+  }
+
+  #fact p{
+    text-align: center;
+  }
+
+  #schedule-services .flexing > div {
+    width: 100% !important;
+    margin-top: 3rem;
+  }
+
+  #schedule-services .flexing > div:first-child {
+    margin-top: 0;
+  }
+
+  .membership-cards-box .inner-container {
+    min-height: 500px;
+  }
+
+  footer {
+      padding: 4rem 0;
+  }
+}
+
+@media (max-width: 400px) {
+  #hero .hero-text {
+    max-width: 275px;
+    width: 100%;
+    margin-left: 4em;
+  }
+
+  nav ul {
+    width: 200px;
+  }
+}
+/* end: media queries */

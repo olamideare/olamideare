@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="The most trusted platform to sell your bitcoin."/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Homepage - Adex Fund Exchange</title>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link href="css/styles-faq.css" type="text/css" rel="Stylesheet" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/062b61d78d.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</head>
+
+<body>
+    <div id="header-hero-container">
+        <header>
+            <div class="flex container">
+                <div id="adex-logo">
+                    <a href="#"><img src="img/adex.png" alt="" height="60px"></a>
+                </div>
+                <nav>
+                    <button id="nav-toggle" class="hamburger-menu">
+                        <span class="strip"></span>
+                        <span class="strip"></span>
+                        <span class="strip"></span>
+                    </button>
+
+                    <ul id="nav-menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="sell.html" target="_blank">Sell</a></li>
+                        <li><a href="Rates.html">Rates</a></li>
+                        <li><a href="about-us.html">About</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li id="active"><a href="sell.html">Trade</a></li>
+                        <li id="close-flyout"><span class="fas fa-times"></span></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        
+        <section id="hero">
+            <div class="fade"></div>
+            <div class="hero-text">
+                <h1>FAQ</h1>
+                <p>Frequently Asked Questions</p>
+            </div>
+        </section>
+    </div>
+
+    <section>
+        <div class="box">
+            <div class="faqs">
+               <details>
+                  <summary>What’s your selling policy?</summary>
+                  <p>Step One: Sell your coins using your wallet address</p>
+                  <p>Step Two: Once transaction is successful, upload the screenshot/proof of success to the transaction form provided</p>
+                  <p>Step Three: Upon receipt, a confirmation email will be sent to seller</p>
+                  <p>Step Four: Seller will be paid fast within minutes.</p>
+               </details>
+               <details>
+                  <summary>Who can sell on this platform?</summary>
+                  <p class="text">We transact with sellers all over the world.</p>
+               </details>
+               <details>
+                  <summary>Do you have customer service?</summary>
+                  <p class="text">Of course! Our friendly and knowledgeable customer services reps are available to answer your questions 24/7/365.</p>
+               </details>
+            </div>
+         </div>
+    </section>
+
+    <footer>
+        <div class="flex container">
+            <div class="footer-about">
+                <h4><strong>About</strong></h4>
+                <p>Adex Fund Exchange is a platform that enables customers to convert their bitcoins to cash at a reasonable price or preferred local currency.</p>
+                <p>Customers can however sell their bitcoins and have money from the sales of the btc sent to their bank account.</p>
+                <p>Banks don't support bitcoin but we offer a secure medium of exchange where bitcoin would be axchange with local currency.</p>
+            </div>
+
+            <div class="footer-quick-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Sell</a></li>
+                    <li><a href="#">Rates</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-subscribe">
+                <h4>Subscribe to our Newsletter</h4>
+                <div id="subscribe-container">
+                    <input type="text" placeholder="Enter Email" />
+                    <button class="right-rounded">Send</button>
+                </div>
+
+                <h5 class="follow-us">Follow Us</h5>
+                <ul>
+                    <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
+                    <li><a href="#"><span class="fab fa-twitter"></span></a></li>
+                    <li><a href="#"><span class="fab fa-instagram"></span></a></li>
+                    <li><a href="#"><span class="fab fa-linkedin-in"></span></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <small>
+            Copyright &copy; 2020 All rights reserved
+        </small>
+    </footer>
+
+    <script>
+        $(function () {
+            let headerElem = $('header');
+            let logo = $('#logo');
+            let navMenu = $('#nav-menu');
+            let navToggle = $('#nav-toggle');
+            let active = $('#active')
+
+           navToggle.on('click', () => {
+               navMenu.css('right', '0');
+           });
+
+           $('#close-flyout').on('click', () => {
+                navMenu.css('right', '-100%');
+           });
+
+           $(document).on('click', (e) => {
+               let target = $(e.target);
+               if (!(target.closest('#nav-toggle').length > 0 || target.closest('#nav-menu').length > 0)) {
+                   navMenu.css('right', '-100%');
+               }
+           });
+
+           $(document).scroll(() => {
+               let scrollTop = $(document).scrollTop();
+
+               if (scrollTop > 0) {
+                   navMenu.addClass('is-sticky');
+                   logo.css('color', '#000');
+                   headerElem.css('background', '#fff');
+                   navToggle.css('border-color', '#fff');
+                   navToggle.find('.strip').css('background-color', '#fff');
+                   active.css ('border-color', '#000')
+               } else {
+                   navMenu.removeClass('is-sticky');
+                   logo.css('color', '#fff');
+                   headerElem.css('background', '#032030');
+                   navToggle.css('bordre-color', '#fff');
+                   navToggle.find('.strip').css('background-color', '#fff');
+                   active.css ('border-color', '#fff')
+               }
+
+               headerElem.css(scrollTop >= 200 ? {'padding': '0.5rem', 'box-shadow': '0 -4px 10px 1px #999'} : {'padding': '1rem 0', 'box-shadow': 'none' });
+           });
+
+           $(document).trigger('scroll');
+        });
+    </script>
+</body>
+</html>
